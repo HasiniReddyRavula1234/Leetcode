@@ -5,9 +5,9 @@ class Solution {
             sum = 0;
             for(int j = 0;j < accounts[0].length;j++){
                 sum += accounts[i][j];
-                if(sum > max_sum)
-                max_sum = sum;
             }
+            if(sum > max_sum)
+                max_sum = sum;
         }
         return max_sum;
     }
