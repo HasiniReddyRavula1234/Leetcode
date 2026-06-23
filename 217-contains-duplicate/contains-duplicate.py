@@ -1,9 +1,38 @@
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
-        nums.sort()
+        return len(nums) != len(set(nums))
 
-        for i in range(1, len(nums)):
-            if nums[i] == nums[i - 1]:
-                return True
 
-        return False
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+        # nums.sort()
+
+        # for i in range(1, len(nums)):
+        #     if nums[i] == nums[i - 1]:
+        #         return True
+
+        # return False
