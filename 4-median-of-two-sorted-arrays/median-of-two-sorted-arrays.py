@@ -8,24 +8,7 @@ class Solution:
             return (nums[r] + nums[r + 1]) / 2
         else:
             return nums[r + 1]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            
         # nums = nums1 + nums2
         # nums.sort()
         # mid = len(nums) // 2
