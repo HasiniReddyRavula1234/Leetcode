@@ -2,20 +2,25 @@
 # class TreeNode:
 #     def __init__(self, val=0, left=None, right=None):
 #         self.val = val
-#         self.left = left
+#         self.left = leftqLen = 
 #         self.right = right
 class Solution:
     def maxDepth(self, root: Optional[TreeNode]) -> int:
-        m = self.preorder(root)
-        return m
-        
-    def preorder(self, root):
-        count = 0
         if root is None:
             return 0
-        left = self.preorder(root.left)
-        right = self.preorder(root.right) 
-        return max(left, right) + 1    
+        q = deque([root])
+        count = 0
+        while q:
+            qLen = len(q)
+            for i in range(qLen):
+                n = q.popleft()
+                if n:
+                    if n.left:
+                        q.append(n.left)
+                    if n.right:
+                        q.append(n.right)
+            count += 1
+        return count
 
 
 
@@ -38,8 +43,39 @@ class Solution:
 
 
 
-        # if root is None:
-        #     return 0
-        # left_depth = self.maxDepth(root.left)
-        # right_depth = self.maxDepth(root.right)
-        # return max(left_depth, right_depth) + 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    #     m = self.preorder(root)
+    #     return m
+        
+    # def preorder(self, root):
+    #     count = 0
+    #     if root is None:
+    #         return 0
+    #     left = self.preorder(root.left)
+    #     right = self.preorder(root.right) 
+    #     return max(left, right) + 1  
+    #     # if root is None:
+    #     #     return 0
+    #     # left_depth = self.maxDepth(root.left)
+    #     # right_depth = self.maxDepth(root.right)
+    #     # return max(left_depth, right_depth) + 1
