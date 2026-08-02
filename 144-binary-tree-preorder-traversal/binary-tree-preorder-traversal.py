@@ -7,12 +7,43 @@
 class Solution:
     def preorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
         lst = []
-        self.preorder(root, lst)
-        return lst
-    def preorder(self, root, lst):
-        if root is None:
-            return 
-        lst.append(root.val)
-        self.preorder(root.left, lst)
-        self.preorder(root.right, lst)
+        def preorder(root):
+            if root is None:
+                return []
+            lst.append(root.val)
+            preorder(root.left)
+            preorder(root.right)
+            return lst
+        return preorder(root)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    #     lst = []
+    #     self.preorder(root, lst)
+    #     return lst
+    # def preorder(self, root, lst):
+    #     if root is None:
+    #         return 
+    #     lst.append(root.val)
+    #     self.preorder(root.left, lst)
+    #     self.preorder(root.right, lst)
     
